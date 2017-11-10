@@ -1,0 +1,19 @@
+"""
+In this Kata, you will be given a string that has lowercase letters and numbers. 
+Your task is to compare the number groupings and return the largest number.
+
+For example, solve("gh12cdy695m1") = 695, because this is the largest of all number groupings.
+"""
+"""
+Test.assert_equals(solve('gh12cdy695m1'),695)
+Test.assert_equals(solve('2ti9iei7qhr5'),9)
+Test.assert_equals(solve('vih61w8oohj5'),61)
+Test.assert_equals(solve('f7g42g16hcu5'),42)
+Test.assert_equals(solve('lu1j8qbbb85'),85)
+"""
+import re
+
+def solves(s):
+    return max(map(int, re.findall(r'\d+', s)), default=0)
+    
+ 
